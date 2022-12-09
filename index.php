@@ -209,7 +209,7 @@ foreach ($cart_items as $item) {
                                     </b></h6>
                             </div>
 
-                            <div class="row">
+                            <div class="row" style="position:relative; top: 10px;">
 
                                 <div class="col-md-6 col-lg-3 col-3">
 
@@ -263,7 +263,7 @@ foreach ($cart_items as $item) {
                                         <button class="btn"></button>
                                     </div>
 
-                                    <div class="box" style=" transform: rotate(180deg);">
+                                    <div class="box" style="transform: rotate(180deg);">
                                         <img src="src/image/like.png" alt="" style="margin-left: 20px;">
                                         <button class="btn"></button>
                                     </div>
