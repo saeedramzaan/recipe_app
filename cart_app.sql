@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 09, 2022 at 05:45 PM
+-- Generation Time: Dec 09, 2022 at 11:45 PM
 -- Server version: 8.0.31-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -40,6 +40,15 @@ CREATE TABLE `meals` (
   `time` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `meals`
+--
+
+INSERT INTO `meals` (`id`, `name`, `calories`, `fat`, `protein`, `category`, `netcarbs`, `image`, `time`) VALUES
+(1, 'Charred Veggie and Fried Goat Cheese Salad', '260', '26.0g', '14.0g', 'BREAKFAST', '1.0g', 'src/image/breakfast.jpg', '25 Min Total'),
+(2, 'Low Carb Spicy Baked Eggs with Cheesy Hash', '260', '26.0g', '14.0g', 'LUNCH', '1.0g', 'src/image/lunch.jpg', '120 Min Total'),
+(3, 'Keto Chorizo Shakshuka', '260', '26.0g', '14.0g', 'DINNER', '1.0g', 'src/image/dinner.jpg ', '45 Min Total ');
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +62,15 @@ CREATE TABLE `week_slot` (
   `date` varchar(100) NOT NULL,
   `items` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `week_slot`
+--
+
+INSERT INTO `week_slot` (`id`, `week`, `days`, `date`, `items`) VALUES
+(1, 'week2', '12', '2022-12-09', 'breakfast,lunch,dinner'),
+(2, 'week3', '12,20', '2022-12-09', 'breakfast,lunch,dinner'),
+(3, 'week3', '12,18,20', '2022-12-09', 'breakfast,lunch,dinner');
 
 --
 -- Indexes for dumped tables
@@ -81,13 +99,13 @@ ALTER TABLE `week_slot`
 -- AUTO_INCREMENT for table `meals`
 --
 ALTER TABLE `meals`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `week_slot`
 --
 ALTER TABLE `week_slot`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
